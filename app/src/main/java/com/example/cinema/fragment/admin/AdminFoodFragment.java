@@ -18,9 +18,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import com.example.cinema.MyApplication;
 import com.example.cinema.R;
 import com.example.cinema.activity.admin.AddFoodActivity;
-import com.example.cinema.adapter.admin.AdminFoodAdapter;
 import com.example.cinema.constant.ConstantKey;
 import com.example.cinema.constant.GlobalFunction;
+import com.example.cinema.constant.adapter.admin.AdminFoodAdapter;
 import com.example.cinema.databinding.FragmentAdminFoodBinding;
 import com.example.cinema.model.Food;
 import com.example.cinema.util.StringUtil;
@@ -32,7 +32,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AdminFoodFragment extends Fragment {
-
     private FragmentAdminFoodBinding mFragmentAdminFoodBinding;
     private List<Food> mListFood;
 
@@ -106,8 +105,8 @@ public class AdminFoodFragment extends Fragment {
                     }
                     MyApplication.get(getActivity()).getFoodDatabaseReference()
                             .child(String.valueOf(food.getId())).removeValue((error, ref) ->
-                            Toast.makeText(getActivity(),
-                                    getString(R.string.msg_delete_food_successfully), Toast.LENGTH_SHORT).show());
+                                    Toast.makeText(getActivity(),
+                                            getString(R.string.msg_delete_food_successfully), Toast.LENGTH_SHORT).show());
                 })
                 .setNegativeButton(getString(R.string.action_cancel), null)
                 .show();
@@ -168,4 +167,5 @@ public class AdminFoodFragment extends Fragment {
         });
         mFragmentAdminFoodBinding.rcvFood.setAdapter(adminFoodAdapter);
     }
+
 }

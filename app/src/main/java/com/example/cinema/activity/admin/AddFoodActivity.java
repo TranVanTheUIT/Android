@@ -82,10 +82,10 @@ public class AddFoodActivity extends BaseActivity {
             map.put("quantity", Integer.parseInt(strQuantity));
             MyApplication.get(this).getFoodDatabaseReference()
                     .child(String.valueOf(mFood.getId())).updateChildren(map, (error, ref) -> {
-                showProgressDialog(false);
-                Toast.makeText(AddFoodActivity.this, getString(R.string.msg_edit_food_successfully), Toast.LENGTH_SHORT).show();
-                GlobalFunction.hideSoftKeyboard(AddFoodActivity.this);
-            });
+                        showProgressDialog(false);
+                        Toast.makeText(AddFoodActivity.this, getString(R.string.msg_edit_food_successfully), Toast.LENGTH_SHORT).show();
+                        GlobalFunction.hideSoftKeyboard(AddFoodActivity.this);
+                    });
             return;
         }
 

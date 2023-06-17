@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:layout_marginEnd="@dimen/define_dimen_10"
     android:layout_marginBottom="@dimen/define_dimen_10"
-    app:cardCornerRadius="@dimen/define_dimen_6">
+    >
 
     <LinearLayout
         android:id="@+id/layout_item"
@@ -38,7 +38,7 @@
                 android:layout_centerVertical="true"
                 tools:ignore="RelativeOverlap,UseCompoundDrawables">
 
-                <TextView
+               <!-- <TextView
                     android:id="@+id/tv_booked"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -51,7 +51,7 @@
                     android:layout_width="@dimen/define_dimen_20"
                     android:layout_height="@dimen/define_dimen_20"
                     android:src="@drawable/ic_view_white"
-                    tools:ignore="ContentDescription" />
+                    tools:ignore="ContentDescription" />-->
             </LinearLayout>
         </RelativeLayout>
 

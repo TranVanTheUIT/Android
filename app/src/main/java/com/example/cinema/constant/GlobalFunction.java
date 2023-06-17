@@ -83,19 +83,16 @@ public class GlobalFunction {
         list.add(new RoomFirebase(2, "Phòng 2", getListTimes()));
         list.add(new RoomFirebase(3, "Phòng 3", getListTimes()));
         list.add(new RoomFirebase(4, "Phòng 4", getListTimes()));
-        list.add(new RoomFirebase(5, "Phòng 5", getListTimes()));
-        list.add(new RoomFirebase(6, "Phòng 6", getListTimes()));
+
         return list;
     }
 
     public static List<TimeFirebase> getListTimes() {
         List<TimeFirebase> list = new ArrayList<>();
-        list.add(new TimeFirebase(1, "7AM - 8AM", getListSeats()));
-        list.add(new TimeFirebase(2, "8AM - 9AM", getListSeats()));
-        list.add(new TimeFirebase(3, "9AM - 10AM", getListSeats()));
-        list.add(new TimeFirebase(4, "10AM - 11AM", getListSeats()));
-        list.add(new TimeFirebase(5, "1PM - 2PM", getListSeats()));
-        list.add(new TimeFirebase(6, "2PM - 3PM", getListSeats()));
+        list.add(new TimeFirebase(1, "8h30(AM) - 9h30(AM)", getListSeats()));
+        list.add(new TimeFirebase(2, "9h30(AM) - 10h30(AM) ", getListSeats()));
+        list.add(new TimeFirebase(5, "7PM - 8PM", getListSeats()));
+        list.add(new TimeFirebase(6, "8PM - 9PM", getListSeats()));
         return list;
     }
 

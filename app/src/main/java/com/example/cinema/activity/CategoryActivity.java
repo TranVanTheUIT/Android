@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.example.cinema.MyApplication;
-import com.example.cinema.adapter.MovieAdapter;
+import com.example.cinema.constant.adapter.MovieAdapter;
 import com.example.cinema.constant.ConstantKey;
 import com.example.cinema.constant.GlobalFunction;
 import com.example.cinema.databinding.ActivityCategoryBinding;

@@ -10,9 +10,9 @@ import androidx.annotation.NonNull;
 import com.example.cinema.MyApplication;
 import com.example.cinema.R;
 import com.example.cinema.activity.BaseActivity;
-import com.example.cinema.adapter.admin.AdminSelectCategoryAdapter;
 import com.example.cinema.constant.ConstantKey;
 import com.example.cinema.constant.GlobalFunction;
+import com.example.cinema.constant.adapter.admin.AdminSelectCategoryAdapter;
 import com.example.cinema.databinding.ActivityAddMovieBinding;
 import com.example.cinema.model.Category;
 import com.example.cinema.model.Movie;
@@ -27,6 +27,7 @@ import java.util.List;
 import java.util.Map;
 
 public class AddMovieActivity extends BaseActivity {
+
 
     private ActivityAddMovieBinding mActivityAddMovieBinding;
     private boolean isUpdate;
@@ -198,10 +199,10 @@ public class AddMovieActivity extends BaseActivity {
 
             MyApplication.get(this).getMovieDatabaseReference()
                     .child(String.valueOf(mMovie.getId())).updateChildren(map, (error, ref) -> {
-                showProgressDialog(false);
-                Toast.makeText(AddMovieActivity.this, getString(R.string.msg_edit_movie_successfully), Toast.LENGTH_SHORT).show();
-                GlobalFunction.hideSoftKeyboard(this);
-            });
+                        showProgressDialog(false);
+                        Toast.makeText(AddMovieActivity.this, getString(R.string.msg_edit_movie_successfully), Toast.LENGTH_SHORT).show();
+                        GlobalFunction.hideSoftKeyboard(this);
+                    });
             return;
         }
 

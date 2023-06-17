@@ -19,7 +19,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import com.example.cinema.MyApplication;
 import com.example.cinema.R;
 import com.example.cinema.activity.admin.AddMovieActivity;
-import com.example.cinema.adapter.admin.AdminMovieAdapter;
+import com.example.cinema.constant.adapter.admin.AdminMovieAdapter;
 import com.example.cinema.constant.ConstantKey;
 import com.example.cinema.constant.GlobalFunction;
 import com.example.cinema.databinding.FragmentAdminHomeBinding;

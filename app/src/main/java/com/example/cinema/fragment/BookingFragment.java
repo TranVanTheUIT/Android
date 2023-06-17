@@ -17,7 +17,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.cinema.MyApplication;
 import com.example.cinema.R;
-import com.example.cinema.adapter.BookingHistoryAdapter;
+import com.example.cinema.constant.adapter.BookingHistoryAdapter;
 import com.example.cinema.constant.GlobalFunction;
 import com.example.cinema.databinding.FragmentBookingBinding;
 import com.example.cinema.listener.IOnSingleClickListener;

@@ -17,11 +17,12 @@ import androidx.viewpager2.widget.ViewPager2;
 import com.example.cinema.MyApplication;
 import com.example.cinema.activity.CategoryActivity;
 import com.example.cinema.activity.SearchActivity;
-import com.example.cinema.adapter.BannerMovieAdapter;
-import com.example.cinema.adapter.CategoryAdapter;
-import com.example.cinema.adapter.MovieAdapter;
+
 import com.example.cinema.constant.ConstantKey;
 import com.example.cinema.constant.GlobalFunction;
+import com.example.cinema.constant.adapter.BannerMovieAdapter;
+import com.example.cinema.constant.adapter.CategoryAdapter;
+import com.example.cinema.constant.adapter.MovieAdapter;
 import com.example.cinema.databinding.FragmentHomeBinding;
 import com.example.cinema.model.Category;
 import com.example.cinema.model.Movie;

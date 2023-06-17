@@ -6,7 +6,6 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.example.cinema.R;
-import com.example.cinema.adapter.MyViewPagerAdapter;
 import com.example.cinema.databinding.ActivityMainBinding;
 
 public class MainActivity extends BaseActivity {
@@ -17,7 +16,7 @@ public class MainActivity extends BaseActivity {
         ActivityMainBinding activityMainBinding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(activityMainBinding.getRoot());
 
-        MyViewPagerAdapter myViewPagerAdapter = new MyViewPagerAdapter(this);
+        com.example.cinema.adapter.MyViewPagerAdapter myViewPagerAdapter = new com.example.cinema.adapter.MyViewPagerAdapter(this);
         activityMainBinding.viewpager2.setAdapter(myViewPagerAdapter);
         activityMainBinding.viewpager2.setUserInputEnabled(false);
 

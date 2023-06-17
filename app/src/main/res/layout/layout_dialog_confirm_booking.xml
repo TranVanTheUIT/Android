@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@string/confirm_booking_infor"
+            android:text="Thông tin vé bạn đặt"
             android:textColor="@color/colorPrimaryDark"
             android:textStyle="bold"
             android:textSize="@dimen/text_size_small" />
@@ -217,11 +217,6 @@
                 android:textStyle="bold" />
         </RelativeLayout>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="@dimen/define_dimen_10"
-            android:background="@color/colorPrimaryDark"/>
 
         <RelativeLayout
             android:layout_width="match_parent"

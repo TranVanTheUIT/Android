@@ -18,7 +18,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import com.example.cinema.MyApplication;
 import com.example.cinema.R;
 import com.example.cinema.activity.admin.AddCategoryActivity;
-import com.example.cinema.adapter.admin.AdminCategoryAdapter;
+/*import com.example.cinema.constant.adapter.admin.AdminCategoryAdapter;*/
 import com.example.cinema.constant.ConstantKey;
 import com.example.cinema.constant.GlobalFunction;
 import com.example.cinema.databinding.FragmentAdminCategoryBinding;
@@ -146,24 +146,6 @@ public class AdminCategoryFragment extends Fragment {
     }
 
     private void loadListData() {
-        if (getActivity() == null) {
-            return;
-        }
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
-        mFragmentAdminCategoryBinding.rcvCategory.setLayoutManager(linearLayoutManager);
 
-        AdminCategoryAdapter adminCategoryAdapter = new AdminCategoryAdapter(mListCategory,
-                new AdminCategoryAdapter.IManagerCategoryListener() {
-                    @Override
-                    public void editCategory(Category category) {
-                        onClickEditCategory(category);
-                    }
-
-                    @Override
-                    public void deleteCategory(Category category) {
-                        deleteCategoryItem(category);
-                    }
-                });
-        mFragmentAdminCategoryBinding.rcvCategory.setAdapter(adminCategoryAdapter);
     }
 }

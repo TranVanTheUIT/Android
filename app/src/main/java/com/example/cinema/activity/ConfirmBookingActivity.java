@@ -22,14 +22,19 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.cinema.MyApplication;
 import com.example.cinema.R;
-import com.example.cinema.adapter.FoodDrinkAdapter;
+/*import com.example.cinema.adapter.FoodDrinkAdapter;
 import com.example.cinema.adapter.RoomAdapter;
 import com.example.cinema.adapter.SeatAdapter;
 import com.example.cinema.adapter.SelectPaymentAdapter;
-import com.example.cinema.adapter.TimeAdapter;
+import com.example.cinema.adapter.TimeAdapter;*/
 import com.example.cinema.constant.ConstantKey;
 import com.example.cinema.constant.GlobalFunction;
 import com.example.cinema.constant.PayPalConfig;
+import com.example.cinema.constant.adapter.FoodDrinkAdapter;
+import com.example.cinema.constant.adapter.RoomAdapter;
+import com.example.cinema.constant.adapter.SeatAdapter;
+import com.example.cinema.constant.adapter.SelectPaymentAdapter;
+import com.example.cinema.constant.adapter.TimeAdapter;
 import com.example.cinema.databinding.ActivityConfirmBookingBinding;
 import com.example.cinema.listener.IOnSingleClickListener;
 import com.example.cinema.model.BookingHistory;
@@ -475,19 +480,19 @@ public class ConfirmBookingActivity extends AppCompatActivity {
         mMovie.setBooked(mMovie.getBooked() + Integer.parseInt(mBookingHistory.getCount()));
         MyApplication.get(ConfirmBookingActivity.this).getMovieDatabaseReference()
                 .child(String.valueOf(mMovie.getId())).setValue(mMovie, (error, ref) ->
-                MyApplication.get(ConfirmBookingActivity.this).getBookingDatabaseReference()
-                        .child(String.valueOf(mBookingHistory.getId()))
-                        .setValue(mBookingHistory, (error1, ref1) -> {
+                        MyApplication.get(ConfirmBookingActivity.this).getBookingDatabaseReference()
+                                .child(String.valueOf(mBookingHistory.getId()))
+                                .setValue(mBookingHistory, (error1, ref1) -> {
 
-                            updateQuantityFoodDrink();
+                                    updateQuantityFoodDrink();
 
-                            if (mDialog != null) mDialog.dismiss();
-                            finish();
+                                    if (mDialog != null) mDialog.dismiss();
+                                    finish();
 
-                            Toast.makeText(ConfirmBookingActivity.this,
-                                    getString(R.string.msg_booking_movie_success), Toast.LENGTH_LONG).show();
-                            GlobalFunction.hideSoftKeyboard(ConfirmBookingActivity.this);
-                        }));
+                                    Toast.makeText(ConfirmBookingActivity.this,
+                                            getString(R.string.msg_booking_movie_success), Toast.LENGTH_LONG).show();
+                                    GlobalFunction.hideSoftKeyboard(ConfirmBookingActivity.this);
+                                }));
     }
 
     private void updateQuantityFoodDrink() {

@@ -10,7 +10,7 @@ import androidx.viewpager2.widget.ViewPager2;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.example.cinema.R;
 import com.example.cinema.activity.BaseActivity;
-import com.example.cinema.adapter.admin.AdminViewPagerAdapter;
+import com.example.cinema.constant.adapter.admin.AdminViewPagerAdapter;
 import com.example.cinema.databinding.ActivityAdminMainBinding;
 import com.example.cinema.event.ResultQrCodeEvent;
 import com.google.zxing.integration.android.IntentIntegrator;
@@ -36,11 +36,10 @@ public class AdminMainActivity extends BaseActivity {
             public void onPageSelected(int position) {
                 super.onPageSelected(position);
                 switch (position) {
-               /*     case 0:
+                   case 0:
                         activityAdminMainBinding.bottomNavigation.getMenu().findItem(R.id.nav_admin_category).setChecked(true);
                         activityAdminMainBinding.tvTitle.setText(getString(R.string.nav_admin_category));
                         break;
-
                     case 1:
                         activityAdminMainBinding.bottomNavigation.getMenu().findItem(R.id.nav_admin_food_drink).setChecked(true);
                         activityAdminMainBinding.tvTitle.setText(getString(R.string.nav_admin_food_drink));
@@ -49,17 +48,16 @@ public class AdminMainActivity extends BaseActivity {
                     case 2:
                         activityAdminMainBinding.bottomNavigation.getMenu().findItem(R.id.nav_admin_movie).setChecked(true);
                         activityAdminMainBinding.tvTitle.setText(getString(R.string.nav_admin_movie));
-                        break;*/
+                        break;
 
-/*                    case 3:
+                    case 3:
                         activityAdminMainBinding.bottomNavigation.getMenu().findItem(R.id.nav_admin_booking).setChecked(true);
                         activityAdminMainBinding.tvTitle.setText(getString(R.string.nav_admin_booking));
                         break;
-*/
-    /*                case 4:
+                    case 4:
                         activityAdminMainBinding.bottomNavigation.getMenu().findItem(R.id.nav_admin_manage).setChecked(true);
                         activityAdminMainBinding.tvTitle.setText(getString(R.string.nav_admin_manage));
-                        break;*/
+                        break;
                 }
             }
         });
@@ -67,11 +65,10 @@ public class AdminMainActivity extends BaseActivity {
         activityAdminMainBinding.bottomNavigation.setOnItemSelectedListener(item -> {
             int id = item.getItemId();
             switch (id) {
-              /*  case R.id.nav_admin_category:
+              case R.id.nav_admin_category:
                     activityAdminMainBinding.viewpager2.setCurrentItem(0);
                     activityAdminMainBinding.tvTitle.setText(getString(R.string.nav_admin_category));
                     break;
-
                 case R.id.nav_admin_food_drink:
                     activityAdminMainBinding.viewpager2.setCurrentItem(1);
                     activityAdminMainBinding.tvTitle.setText(getString(R.string.nav_admin_food_drink));
@@ -80,22 +77,22 @@ public class AdminMainActivity extends BaseActivity {
                 case R.id.nav_admin_movie:
                     activityAdminMainBinding.viewpager2.setCurrentItem(2);
                     activityAdminMainBinding.tvTitle.setText(getString(R.string.nav_admin_movie));
-                    break;*/
+                    break;
 
-/*                case R.id.nav_admin_booking:
+                case R.id.nav_admin_booking:
                     activityAdminMainBinding.viewpager2.setCurrentItem(3);
                     activityAdminMainBinding.tvTitle.setText(getString(R.string.nav_admin_booking));
                     break;
-*/
-      /*          case R.id.nav_admin_manage:
+                case R.id.nav_admin_manage:
                     activityAdminMainBinding.viewpager2.setCurrentItem(4);
                     activityAdminMainBinding.tvTitle.setText(getString(R.string.nav_admin_manage));
-                    break;*/
+                    break;
 
             }
             return true;
         });
     }
+
 
     private void showDialogLogout() {
         new MaterialDialog.Builder(this)

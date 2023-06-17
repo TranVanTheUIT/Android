@@ -17,6 +17,7 @@ import java.util.Map;
 
 public class AddCategoryActivity extends BaseActivity {
 
+
     private ActivityAddCategoryBinding mActivityAddCategoryBinding;
     private boolean isUpdate;
     private Category mCategory;
@@ -74,11 +75,11 @@ public class AddCategoryActivity extends BaseActivity {
 
             MyApplication.get(this).getCategoryDatabaseReference()
                     .child(String.valueOf(mCategory.getId())).updateChildren(map, (error, ref) -> {
-                showProgressDialog(false);
-                Toast.makeText(AddCategoryActivity.this,
-                        getString(R.string.msg_edit_category_successfully), Toast.LENGTH_SHORT).show();
-                GlobalFunction.hideSoftKeyboard(AddCategoryActivity.this);
-            });
+                        showProgressDialog(false);
+                        Toast.makeText(AddCategoryActivity.this,
+                                getString(R.string.msg_edit_category_successfully), Toast.LENGTH_SHORT).show();
+                        GlobalFunction.hideSoftKeyboard(AddCategoryActivity.this);
+                    });
             return;
         }
 
@@ -95,4 +96,5 @@ public class AddCategoryActivity extends BaseActivity {
             Toast.makeText(this, getString(R.string.msg_add_category_successfully), Toast.LENGTH_SHORT).show();
         });
     }
+
 }

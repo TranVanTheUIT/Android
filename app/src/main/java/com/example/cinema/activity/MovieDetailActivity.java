@@ -113,7 +113,7 @@ public class MovieDetailActivity extends AppCompatActivity {
 
     private void initListener() {
         mActivityMovieDetailBinding.imgBack.setOnClickListener(view -> onBackPressed());
-        mActivityMovieDetailBinding.btnWatchTrailer.setOnClickListener(view -> scrollToLayoutTrailer());
+        /*mActivityMovieDetailBinding.btnWatchTrailer.setOnClickListener(view -> scrollToLayoutTrailer());*/
         mActivityMovieDetailBinding.imgPlayMovie.setOnClickListener(view -> startVideo());
         mActivityMovieDetailBinding.btnBooking.setOnClickListener(view -> onClickGoToConfirmBooking());
     }

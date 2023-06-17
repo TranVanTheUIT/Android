@@ -7,8 +7,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.cinema.MyApplication;
-import com.example.cinema.adapter.admin.AdminRevenueAdapter;
+/*import com.example.cinema.constant.adapter.admin.AdminRevenueAdapter;*/
 import com.example.cinema.constant.ConstantKey;
+import com.example.cinema.constant.adapter.admin.AdminRevenueAdapter;
 import com.example.cinema.databinding.ActivityAdminRevenueBinding;
 import com.example.cinema.model.BookingHistory;
 import com.example.cinema.model.Revenue;
@@ -20,7 +21,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AdminRevenueActivity extends AppCompatActivity {
-
     private ActivityAdminRevenueBinding mActivityAdminRevenueBinding;
     private List<Revenue> mListRevenue;
 

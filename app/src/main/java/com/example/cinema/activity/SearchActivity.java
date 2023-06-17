@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 
 import com.example.cinema.MyApplication;
 import com.example.cinema.R;
-import com.example.cinema.adapter.MovieAdapter;
+import com.example.cinema.constant.adapter.MovieAdapter;
 import com.example.cinema.constant.GlobalFunction;
 import com.example.cinema.databinding.ActivitySearchBinding;
 import com.example.cinema.model.Category;
